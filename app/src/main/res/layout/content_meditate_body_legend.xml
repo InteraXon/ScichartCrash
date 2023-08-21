@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme">
+
+    <View
+        android:id="@+id/active_colour"
+        android:layout_width="@dimen/legend_color_width"
+        android:layout_height="0dp"
+        android:background="@color/body_result_active"
+        app:layout_constraintBottom_toBottomOf="@id/active_time_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/active_title_text" />
+
+    <TextView
+        android:id="@+id/active_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:text="@string/session_flow_review_popup_active_title"
+        android:textColor="?attr/graphXAxis"
+        android:textSize="@dimen/results_screen_graph_labels_text_size"
+        app:layout_constraintBottom_toTopOf="@id/active_time_text"
+        app:layout_constraintStart_toEndOf="@id/active_colour"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/active_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/graphXAxis"
+        android:textSize="@dimen/results_screen_graph_labels_text_size"
+        app:layout_constraintStart_toStartOf="@id/active_title_text"
+        app:layout_constraintTop_toBottomOf="@id/active_title_text"
+        tools:text="1 hr 5 min" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/active_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="active_time_text, active_title_text" />
+
+    <View
+        android:id="@+id/neutral_colour"
+        android:layout_width="@dimen/legend_color_width"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/spacing_4dp"
+        android:background="@color/body_orange"
+        app:layout_constraintBottom_toBottomOf="@id/active_colour"
+        app:layout_constraintStart_toEndOf="@id/active_barrier"
+        app:layout_constraintTop_toTopOf="@id/active_colour" />
+
+    <TextView
+        android:id="@+id/neutral_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:text="@string/session_flow_review_relaxed_title"
+        android:textColor="?attr/graphXAxis"
+        android:textSize="@dimen/results_screen_graph_labels_text_size"
+        app:layout_constraintStart_toEndOf="@id/neutral_colour"
+        app:layout_constraintTop_toTopOf="@id/active_title_text" />
+
+    <TextView
+        android:id="@+id/relaxed_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_12dp"
+        android:textColor="?attr/graphXAxis"
+        android:textSize="@dimen/results_screen_graph_labels_text_size"
+        app:layout_constraintStart_toStartOf="@id/neutral_title_text"
+        app:layout_constraintTop_toTopOf="@id/active_time_text"
+        tools:text="1 hr 5 min" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/relaxed_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="neutral_title_text, relaxed_time_text" />
+
+    <include
+        android:id="@+id/zoomingView"
+        layout="@layout/layout_chart_zooming"
+        android:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

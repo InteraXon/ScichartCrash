@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/mixed_graph_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/spacing_10dp"
+        android:paddingEnd="@dimen/spacing_10dp"
+        app:layout_constraintBottom_toTopOf="@id/closer_look_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginBottom="@dimen/spacing_26dp" />
+
+    <TextView
+        android:id="@+id/closer_look_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_16dp"
+        android:layout_marginTop="@dimen/spacing_16dp"
+        android:layout_marginBottom="@dimen/spacing_16dp"
+        android:text="@string/sleep_session_results_take_closer_look"
+        android:textColor="?attr/primarySurfaceText"
+        android:textSize="@dimen/graph_details_button_text"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/closer_look_arrow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mixed_graph_container" />
+
+    <ImageView
+        android:id="@+id/closer_look_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/spacing_6dp"
+        android:layout_marginEnd="@dimen/spacing_16dp"
+        android:contentDescription="@string/sleep_session_results_take_closer_look"
+        android:src="@drawable/ic_chevron_closer_look"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/closer_look_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/closer_look_text"
+        app:layout_constraintTop_toTopOf="@+id/closer_look_text"
+        app:tint="?attr/selectionArrowColor" />
+
+    <!--<TextView
+        android:id="@+id/help_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_6dp"
+        android:background="@drawable/sleep_help_button"
+        android:contentDescription="@string/sleep_help_learn_more"
+        android:gravity="center"
+        android:padding="@dimen/spacing_4dp"
+        android:paddingStart="@dimen/spacing_14dp"
+        android:paddingEnd="@dimen/spacing_14dp"
+        android:text="@string/sleep_help_learn_more"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_7sdp"
+        app:layout_constraintBottom_toBottomOf="@id/help_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/help_button"
+        tools:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/help_button"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/results_screen_magnifying_glass_button_size"
+        android:background="?selectableItemBackground"
+        android:contentDescription="@string/sleep_help_learn_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/help_button_text"
+        app:layout_constraintStart_toStartOf="@id/help_button_text"
+        app:layout_constraintTop_toBottomOf="@id/mixed_graph_container" />
+
+    <View
+        android:id="@+id/graph_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginStart="@dimen/standart_space"
+        android:layout_marginEnd="@dimen/standart_space"
+        android:background="@drawable/divider_horizontal_sleep"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

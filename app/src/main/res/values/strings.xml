@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">MySciChart</string>
+
+    <string name="time_format_hr_abbreviation">%1$d hr</string>
+    <string name="time_format_hour_abbreviation">%1$dh</string>
+    <string name="time_format_min_abbreviation">%1$d min</string>
+    <string name="time_format_minute_abbreviation">%1$dm</string>
+    <string name="time_format_sec_abbreviation">%1$d sec</string>
+    <string name="time_format_second_abbreviation">%1$ds</string>
+
+    <string name="mtrl_picker_date_header_title">Select a Date</string>
+
+
+    <string name="session_results_zoom_in">ZOOM IN</string>
+    <string name="session_results_zoom_out">ZOOM OUT</string>
+
+    <string name="sleep_session_results_mind_graph_title">Mind</string>
+    <string name="sleep_session_results_heart_graph_title">Heart Rate</string>
+    <string name="sleep_session_results_heart_graph_units">bpm</string>
+    <string name="sleep_session_results_avg_heart_rate">Avg. HR</string>
+    <string name="sleep_session_results_mind_deep_focus">Calm</string>
+    <string name="sleep_session_results_take_closer_look">Take a closer look</string>
+
+    <string name="sleep_session_results_graph_detail_body_title">Stillness</string>
+    <string name="sleep_session_results_graph_detail_body_still">Still</string>
+
+
+    <string name="session_flow_review_popup_active_title">Active</string>
+    <string name="session_flow_review_popup_neutral_title">Neutral</string>
+    <string name="session_flow_review_popup_calm_title">Calm</string>
+
+    <string name="session_flow_review_relaxed_title">Relaxed</string>
+    <string name="session_flow_review_historical_average_title">Historical Average</string>
+    <string name="session_flow_review_historical_high_low_title">Historical high/low</string>
+    <string name="session_flow_review_heart_graph_units">BPM</string>
+
+
+    <string name="scichart_key" translatable="false">o3LbqUEJmmevl1fpUZ3ISTaBDsz3eMloOXeJDJRQmcYLjtIF/he6hCpLiutNPo4WELcS5IfN+lgowX+aWftnR89R/IWWRakly1c/wzRM+hWhlCr9JptNfxcHjQUOFFluzHkhgIWHh2Lx8MLb3yksgFV6uBWkR0WuxEGIWcgd3TvjQ7smRhbZ8qGtSkS3LI/mKuGNGxQ39XpyB6AhDWMFDkre9eCMrnTZUgK15mguT9+aZ4DeB6PtYlXQgnfrbcMS1Uss2QS5cUXszsF/foLLuceKNouLU769taH6EJNvNt4oQgVsWX6yEwMgVsROOJuYbk0odGQrZ2tPfUx9Q5+taXxRuhP68JmYWAbrh9SAyYRR4nmA3TCBdnGl2noVMT4lJHnzZiNUVD+0T5nAiZRXMyHnBP9438qKvn3k8oOaQ20SCAMuJFPDbFQppvopiVs7hFO0/dhcjr1Gda/ZyrgYUICNnh7vRWr5FabDionhudVxaRhWLo7eLKr3ZwcQ6L0xv9ISIF6puts1OSt9Hw1iIJAnpifAH6o42S9PoGt5h+oi8kAZ5Ox7ZL6/H+2j8xhG93y0waTIfjR3O5gOM7phjFOZIFqpvbEmrSkwemqIo2N3WrFOmFsTA1ZL9ifgCwt8QO8TJ6Ubb+VQ75c=</string>
+
+</resources>

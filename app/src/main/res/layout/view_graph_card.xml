@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.myscichart.my_graphs.graph.GraphCardView.Data" />
+
+        <import type="com.example.myscichart.my_graphs.graph.GraphCardView.MetricType" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:outlineAmbientShadowColor="@color/transparent_black"
+        android:outlineSpotShadowColor="@color/transparent_black"
+        app:cardBackgroundColor="?attr/frontSurface"
+        app:cardCornerRadius="@dimen/_4sdp"
+        tools:targetApi="p">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/spacing_10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/graphInformationButton"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:foreground="?attr/selectableItemBackground"
+                app:layout_constraintBottom_toBottomOf="@id/metricLayoutButton"
+                app:layout_constraintEnd_toStartOf="@id/metricLayoutButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textViewGraphTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:fontFamily="@font/museo_sans_rounded_700"
+                    android:text="@{data.title}"
+                    android:textColor="?attr/primarySurfaceText"
+                    android:textSize="@dimen/presleep_result_graph_widget_title"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Heart rate" />
+
+                <ImageView
+                    android:id="@+id/infoImage"
+                    android:layout_width="@dimen/_9sdp"
+                    android:layout_height="@dimen/_9sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_7sdp"
+                    android:contentDescription="@{data.title}"
+                    android:src="@drawable/icn_information"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textViewGraphTitle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/metricLayoutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?attr/selectableItemBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/metric_stat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_6dp"
+                    android:fontFamily="@font/museo_sans_rounded_700"
+                    android:text="@{data.metricValue}"
+                    android:textColor="?attr/primarySurfaceText"
+                    android:textSize="@dimen/guided_section_text_size"
+                    app:layout_constraintEnd_toEndOf="@id/metric_description"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0"
+                    tools:text="7hr 5m" />
+
+                <TextView
+                    android:id="@+id/metric_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_6dp"
+                    android:layout_marginBottom="@dimen/spacing_6dp"
+                    android:fontFamily="@font/proxima_nova_400"
+                    android:text="@{data.description}"
+                    android:textColor="?attr/primarySurfaceText"
+                    android:textSize="@dimen/presleep_result_stats_widget_text_small"
+                    app:layout_constraintEnd_toStartOf="@id/frameLayout"
+                    app:layout_constraintTop_toBottomOf="@id/metric_stat"
+                    app:layout_goneMarginEnd="@dimen/_7sdp"
+                    tools:text="time asleep" />
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_7sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/metric_description"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/metric_stat"
+                    app:visibleGone="@{data.type != MetricType.TIME &amp;&amp; data.type != MetricType.POINTS}"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_meditation_mode_heart_no_shadow"
+                        app:visibleGone="@{data.type == MetricType.BPM}"
+                        tools:visibility="gone" />
+
+                    <com.example.myscichart.CircularSeekBar
+                        android:id="@+id/percentage_bar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:progress="@{data.metric}"
+                        app:circle_color="@color/light_grey"
+                        app:circle_progress_color="@color/gm_player_accent_color"
+                        app:circle_stroke_width="@dimen/_4sdp"
+                        app:circle_style="round"
+                        app:presleepProgDrawable="@{data.percentageColor}"
+                        app:visibleGone="@{data.type == MetricType.PERCENTAGE}"
+                        tools:visibility="visible" />
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/border"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/light_grey"
+                app:layout_constraintTop_toBottomOf="@id/metricLayoutButton" />
+
+            <FrameLayout
+                android:id="@+id/results_preview_graph"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/border"
+                tools:layout_height="190dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

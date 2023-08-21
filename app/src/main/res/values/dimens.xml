@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="spacing_4dp">@dimen/_4sdp</dimen>
+    <dimen name="spacing_6dp">@dimen/_6sdp</dimen>
+    <dimen name="spacing_10dp">@dimen/_10sdp</dimen>
+    <dimen name="spacing_12dp">@dimen/_12sdp</dimen>
+    <dimen name="spacing_16dp">@dimen/_16sdp</dimen>
+    <dimen name="spacing_26dp">@dimen/_26sdp</dimen>
+
+    <dimen name="standart_space">16dp</dimen>
+
+    <dimen name="presleep_result_stats_widget_text_small">@dimen/_7ssp</dimen>
+    <dimen name="presleep_result_graph_widget_title">@dimen/_12ssp</dimen>
+
+
+    <dimen name="results_screen_graph_labels_text_size">@dimen/_7ssp</dimen>
+    <dimen name="results_screen_graph_legend_text_size">@dimen/_10ssp</dimen>
+    <dimen name="heart_graph_legend_rect_width">@dimen/_12sdp</dimen>
+    <dimen name="heart_graph_legend_rect_height">@dimen/_5sdp</dimen>
+    <dimen name="results_screen_graph_annotation_icon_size">@dimen/_12sdp</dimen>
+    <item name="results_screen_graph_annotation_bias" format="float" type="dimen">0.89</item>
+
+    <dimen name="guided_section_text_size">@dimen/_13ssp</dimen>
+
+
+    <dimen name="legend_color_width">@dimen/_5sdp</dimen>
+    <dimen name="graph_at_a_glance_height">@dimen/_107sdp</dimen>
+    <dimen name="graph_details_button_text">@dimen/_10ssp</dimen>
+
+
+    <dimen name="_10sdp">10.00dp</dimen>
+    <dimen name="_12sdp">12.00dp</dimen>
+    <dimen name="_2sdp">2.00dp</dimen>
+    <dimen name="_1sdp">1.00dp</dimen>
+
+</resources>

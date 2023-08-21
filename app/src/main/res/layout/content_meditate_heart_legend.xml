@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme">
+
+    <!-- Using child layouts to enable highlighting of these areas first-time session flow -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/averageLegend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/histAvgIcon"
+            android:layout_width="@dimen/heart_graph_legend_rect_width"
+            android:layout_height="@dimen/heart_graph_legend_rect_height"
+            android:background="?attr/heartHistoricalAvg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/histAvgText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:text="@string/session_flow_review_historical_average_title"
+            android:textColor="?attr/graphXAxis"
+            android:textSize="@dimen/results_screen_graph_legend_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/histAvgIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/historicalLegend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standart_space"
+        app:layout_constraintBottom_toBottomOf="@id/averageLegend"
+        app:layout_constraintStart_toEndOf="@id/averageLegend"
+        app:layout_constraintTop_toTopOf="@id/averageLegend">
+
+        <ImageView
+            android:id="@+id/histHighLowIcon"
+            android:layout_width="@dimen/heart_graph_legend_rect_width"
+            android:layout_height="wrap_content"
+            android:layerType="software"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dash_line_meditate"
+            app:layout_constraintBottom_toBottomOf="@id/histHighLowText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/histHighLowText"
+            android:contentDescription="@string/session_flow_review_historical_high_low_title" />
+
+        <TextView
+            android:id="@+id/histHighLowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:text="@string/session_flow_review_historical_high_low_title"
+            android:textColor="?attr/graphXAxis"
+            android:textSize="@dimen/results_screen_graph_legend_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/histHighLowIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/zoomingView"
+        layout="@layout/layout_chart_zooming"
+        android:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

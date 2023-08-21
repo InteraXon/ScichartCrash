@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseAppTheme" parent="@style/Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/primary</item>
+        <item name="colorError">@color/alert_red</item>
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColorSecondary">@color/light_grey</item>
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="materialCalendarStyle">@style/Widget.MaterialComponents.MaterialCalendar</item>
+        <item name="materialCalendarFullscreenTheme">
+            @style/ThemeOverlay.MaterialComponents.MaterialCalendar.Fullscreen
+        </item>
+        <item name="materialCalendarTheme">@style/ThemeOverlay.MaterialComponents.MaterialCalendar
+        </item>
+        <item name="android:colorEdgeEffect">@color/edge_effect_color</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="curvedHeaderGradientTop">@color/primary</item>
+        <item name="curvedHeaderGradientBottom">@color/primary_dark</item>
+        <item name="frontSurface">@color/white</item>
+        <item name="backSurface">@color/background_grey</item>
+        <item name="primaryHeaderText">@color/background_grey</item>
+        <item name="secondaryHeaderText">@color/white</item>
+        <item name="primarySurfaceText">@color/text_color_darker_grey</item>
+        <item name="secondarySurfaceText">@color/text_color_darker_grey</item>
+        <item name="primaryHorizontalDivider">@color/sleep_divider_grey_light</item>
+        <item name="secondaryHorizontalDivider">@color/sleep_subtext_grey_light</item>
+        <item name="selectionArrowColor">@color/text_color_darker_grey</item>
+        <item name="graphXAxis">@color/text_color_darker_grey</item>
+        <item name="timeseries">@color/text_color_darker_grey</item>
+        <item name="timeseriesGap">@color/text_color_darker_grey</item>
+        <item name="heartHistoricalAvg">@color/heart_graph_historical_light</item>
+        <item name="addNoteText">@color/white</item>
+        <item name="primaryText">@color/text_color_darker_grey</item>
+        <item name="messageBoxBackground">@color/white_opacity_75</item>
+        <item name="circularSeekBar">@color/secondary_background_light</item>
+        <item name="circularSeekBarCircleFill">@color/white_opacity_75</item>
+        <item name="circularSeekBarProgress">@color/progress_primary_color</item>
+        <item name="primaryIcon">@color/white</item>
+        <item name="secondaryIcon">@color/black</item>
+        <item name="pointerIcon">@color/progress_primary_color</item>
+        <item name="playScreenErrorBackground">@color/error_background</item>
+        <item name="transparentButton">@color/white_opacity_50</item>
+        <item name="buttonBackground">@color/white</item>
+        <item name="stopTrackingButton">@color/black</item>
+        <item name="lightText">@color/white</item>
+        <item name="hintText">@color/text_color_darker_grey</item>
+        <item name="primaryBottomSheet">@color/error_background</item>
+        <item name="secondaryBottomSheet">@color/white</item>
+        <item name="bottomSheetDivider">@color/meditate_divider</item>
+        <item name="bottomSheetDescriptionText">@color/sleep_journey_list_title_color</item>
+        <item name="awardsBackground">@color/awards_background_grey</item>
+        <item name="playerSettingBackground">@color/sleep_journey_list_title_color</item>
+        <item name="playerSettingCircleButton">@color/mind_light_purple</item>
+        <item name="selectedDuration">@color/mind_light_purple</item>
+        <item name="subscriptionTextColorTitle">@color/text_color_title</item>
+        <item name="tabButtonBackgroundUnselected">@color/primary_light</item>
+    </style>
+
+    <style name="AppTheme" parent="BaseAppTheme" />
+
+    <style name="MindTheme" parent="AppTheme">
+        <item name="curvedHeaderGradientTop">@color/mind_light_purple</item>
+        <item name="curvedHeaderGradientBottom">@color/mind_dark_purple</item>
+        <item name="android:statusBarColor">@color/mind_light_purple</item>
+        <item name="durationIcon">@drawable/duration_icon_mind</item>
+        <item name="endTimeIcon">@drawable/endtime_icon_mind</item>
+        <item name="startTimeIcon">@drawable/starttime_icon_mind</item>
+        <item name="primaryBottomSheet">@color/mind_light_purple</item>
+        <item name="playScreenErrorBackground">@color/mind_light_purple</item>
+        <item name="playerSettingCircleButton">@color/mind_light_purple</item>
+        <item name="selectedDuration">@color/mind_light_purple</item>
+    </style>
+
+    <style name="BodyTheme" parent="AppTheme">
+        <item name="curvedHeaderGradientTop">@color/body_light_orange</item>
+        <item name="curvedHeaderGradientBottom">@color/body_dark_orange</item>
+        <item name="android:statusBarColor">@color/body_light_orange</item>
+        <item name="durationIcon">@drawable/duration_icon_body</item>
+        <item name="endTimeIcon">@drawable/endtime_icon_body</item>
+        <item name="startTimeIcon">@drawable/starttime_icon_body</item>
+        <item name="primaryBottomSheet">@color/body_light_orange</item>
+        <item name="playScreenErrorBackground">@color/body_light_orange</item>
+        <item name="playerSettingCircleButton">@color/body_light_orange</item>
+        <item name="selectedDuration">@color/body_light_orange</item>
+    </style>
+
+    <style name="HeartTheme" parent="AppTheme">
+        <item name="curvedHeaderGradientTop">@color/heart_red</item>
+        <item name="curvedHeaderGradientBottom">@color/heart_dark_red</item>
+        <item name="android:statusBarColor">@color/heart_red</item>
+        <item name="durationIcon">@drawable/duration_icon_heart</item>
+        <item name="endTimeIcon">@drawable/endtime_icon_heart</item>
+        <item name="startTimeIcon">@drawable/starttime_icon_heart</item>
+        <item name="primaryBottomSheet">@color/heart_red</item>
+        <item name="playScreenErrorBackground">@color/heart_red</item>
+        <item name="playerSettingCircleButton">@color/heart_red</item>
+        <item name="selectedDuration">@color/heart_red</item>
+    </style>
+
+    <style name="GuidedTheme" parent="AppTheme">
+        <item name="curvedHeaderGradientTop">@color/guided_light_green</item>
+        <item name="curvedHeaderGradientBottom">@color/guided_dark_green</item>
+        <item name="android:statusBarColor">@color/guided_light_green</item>
+        <item name="durationIcon">@drawable/duration_icon_guided</item>
+        <item name="endTimeIcon">@drawable/endtime_icon_guided</item>
+        <item name="startTimeIcon">@drawable/starttime_icon_guided</item>
+        <item name="primaryBottomSheet">@color/guided_light_green</item>
+        <item name="playScreenErrorBackground">@color/guided_light_green</item>
+        <item name="playerSettingCircleButton">@color/guided_light_green</item>
+        <item name="selectedDuration">@color/guided_light_green</item>
+    </style>
+
+</resources>

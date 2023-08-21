@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+
+
+    <color name="primary_dark">#008f7a</color>
+    <color name="primary">#00A58B</color>
+    <color name="accent_green">#01AF97</color>
+    <color name="primary_light">#43BCA9</color>
+
+    <color name="alert_red">#D60B0B</color>
+    <color name="white_opacity_75">#BFFFFFFF</color>
+    <color name="white_opacity_50">#80FFFFFF</color>
+    <color name="red">#ff0000</color>
+    <color name="transparent_black">#00000000</color>
+
+    <color name="sleep_journey_list_title_color">#E5E5E5</color>
+
+    <color name="sleep_subtext_grey_light">#C7BED0</color>
+    <color name="sleep_divider_grey_light">#6A6A6A</color>
+
+    <color name="text_color_title">#4D4D4E</color>
+
+    <!--inactive tabbar icons-->
+    <!--form utility icons (password eye, text field clear, etc.)-->
+    <!--text labels when on white BG-->
+    <!--active session data-->
+    <color name="dark_grey">#6a6b6e</color>
+    <!--HR's / layout dividing lines-->
+    <!--chart labels-->
+    <!--secondary labels (eg. date stamps)-->
+    <!--tab bar border-->
+    <color name="light_grey">#c6c7c7</color>
+    <!--top navigation bar throughout app-->
+    <!--highlights (arrows, text titles)-->
+    <!--not links-->
+    <!--backgrounds of list views (like settings)-->
+    <!--active tabbar icon-->
+    <!--general numeric data-->
+    <!--neutral session data-->
+    <!--completed sessions √-->
+    <!--alternative to black-->
+
+    <!--active buttons-->
+    <!--clickable links-->
+    <!--interactive links-->
+    <!--interactive icons-->
+
+    <!--data representing "calm" anywhere-->
+
+    <!--error states-->
+    <!--special buttons-->
+    <!--drawing attention in special alert cases-->
+
+    <!--custom journey download-->
+
+    <!--circle page indicator-->
+
+    <!-- session intro course pink -->
+
+    <!-- session graph colors -->
+
+    <color name="text_color_darker_grey">#4A4A4A</color>
+
+    <!-- Me screen -->
+
+    <!-- product intro colors -->
+
+    <!--Guided Meditation-->
+    <color name="gm_player_accent_color">#00A68D</color>
+
+    <!--onboarding page colors-->
+
+    <color name="body_result_active">#F7D1A9</color>
+
+    <color name="results_graph_axis">#C8BFD1</color>
+
+    <color name="mind_results_graph_active_color">#C9D0E6</color>
+    <color name="mind_results_graph_neutral_color">#B1A2D5</color>
+    <color name="mind_results_graph_calm_color">#5B61BC</color>
+
+    <color name="edge_effect_color">#C0C0C0</color>
+
+    <!--universal meditation results-->
+    <color name="heart_graph_historical_light">#C4C4C4</color>
+
+    <color name="mind_light_purple">#7073B5</color>
+    <color name="mind_dark_purple">#4F5294</color>
+    <color name="body_orange">#F79826</color>
+    <color name="body_light_orange">#F4A64C</color>
+    <color name="body_dark_orange">#CE7E21</color>
+    <color name="heart_red">#EF5069</color>
+    <color name="heart_dark_red">#BC223A</color>
+    <color name="guided_light_green">#9AD19C</color>
+    <color name="guided_dark_green">#31AD36</color>
+
+    <color name="background_grey">#F2F2F2</color>
+
+    <!--new player screen-->
+    <color name="secondary_background_light">#20000000</color>
+    <color name="progress_primary_color">#E6FFFFFF</color>
+    <color name="error_background">#7073B5</color>
+
+    <!--stop screen-->
+
+    <!--new SQC screen-->
+    <color name="meditate_divider">#AD785B9D</color>
+
+    <!--new awards screen-->
+    <color name="awards_background_grey">#F8F8F8</color>
+
+    <!--  All colours below this line have dark mode variants  -->
+</resources>
