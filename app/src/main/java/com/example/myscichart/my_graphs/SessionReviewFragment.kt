@@ -129,7 +129,7 @@ class SessionReviewFragment : Fragment(R.layout.fragment_session_review) {
         android.os.Handler().postDelayed({
             requireActivity().finish()
             GlobalConstant.isSession1 = !GlobalConstant.isSession1
-        }, 1000)
+        }, 100)
 
     }
 

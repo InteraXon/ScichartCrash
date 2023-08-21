@@ -12,8 +12,6 @@ class FirstActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFirstBinding
 
-    val testList = ArrayList<Long>(6600000)
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFirstBinding.inflate(layoutInflater)
@@ -29,7 +27,7 @@ class FirstActivity : AppCompatActivity() {
         android.os.Handler().postDelayed({
             val intent = Intent(this, SessionReviewActivity::class.java)
             startActivity(intent)
-        }, 100)
+        }, 10)
 
     }
 
