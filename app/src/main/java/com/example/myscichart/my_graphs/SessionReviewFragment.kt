@@ -2,6 +2,8 @@ package com.example.myscichart.my_graphs
 
 import android.graphics.PointF
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,8 +30,8 @@ import java.util.EnumMap
 
 class SessionReviewFragment : Fragment(R.layout.fragment_session_review) {
 
-    private var session1 = SessionObj1().userSession
-    private var session2 = SessionObj2().userSession
+    private var session1 = SessionObj1.userSession
+    private var session2 = SessionObj2.userSession
 
     private val viewModel: SessionReviewViewModel by lazy {
         ViewModelProvider(this)[SessionReviewViewModel::class.java]
@@ -122,14 +124,10 @@ class SessionReviewFragment : Fragment(R.layout.fragment_session_review) {
 
         setupGraphRows(viewModel.graphs)
 
-        requireActivity().onBackPressedDispatcher.addCallback(requireActivity()) {
-            activity?.finish()
-        }
-
-        android.os.Handler().postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed({
             requireActivity().finish()
             GlobalConstant.isSession1 = !GlobalConstant.isSession1
-        }, 100)
+        }, 1000)
 
     }
 
